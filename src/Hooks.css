@@ -1,0 +1,21 @@
+div.hooks {
+  padding: 20px;
+}
+.dark--theme {
+  background-color: black;
+  color: white;
+}
+.light--theme {
+  background-color: white;
+  color: black;
+}
+
+.user__details {
+  text-align: center;
+}
+.user {
+  width: 300px;
+  margin: auto;
+  border: 2px solid blue;
+  color: green;
+}
