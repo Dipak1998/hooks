@@ -4,6 +4,7 @@ import ComA from './ComA'
 import ComC from './ComC'
 import Hooks from './Hooks'
 import Hooks2 from './Hooks2'
+import ReducerHook from './ReducerHook'
 // create context
 
 const FirstName = createContext()
@@ -17,7 +18,8 @@ function App() {
       </FirstName.Provider>
       <ComA /> */}
       {/* <Hooks /> */}
-      <Hooks2 />
+      {/* <Hooks2 /> */}
+      <ReducerHook />
     </div>
   )
 }
