@@ -3,12 +3,13 @@ import { React, useState, useReducer } from 'react'
 
 var count = 0
 const reducer = (state, action) => {
-  console.log('State:', state, 'Action:', action)
+  console.log('State before action:', state, 'Action:', action)
   if (action.type === 'INCREMENT') {
-    state += 1
+    state += 5
   } else if (action.type === 'DECREMENT') {
-    state -= 1
+    state -= 5
   }
+  console.log('State after action:', state, 'Action:', action)
   return state
 }
 const ReducerHook = () => {
@@ -24,8 +25,12 @@ const ReducerHook = () => {
       <button onClick={() => setCount(count - 1)}>Decrement</button> */}
       {/* with reuducer */}
       {/* <p>Now count is after increment/decremet : {count}</p> */}
-      <button onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
-      <button onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
+      <button onClick={() => dispatch({ type: 'INCREMENT' })}>
+        Increment by 5
+      </button>
+      <button onClick={() => dispatch({ type: 'DECREMENT' })}>
+        Decrement by 5
+      </button>
     </div>
   )
 }

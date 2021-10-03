@@ -5,6 +5,7 @@ import ComC from './ComC'
 import Hooks from './Hooks'
 import Hooks2 from './Hooks2'
 import ReducerHook from './ReducerHook'
+import ControlForm from './ControlForm'
 // create context
 
 const FirstName = createContext()
@@ -19,7 +20,8 @@ function App() {
       <ComA /> */}
       {/* <Hooks /> */}
       {/* <Hooks2 /> */}
-      <ReducerHook />
+      {/* <ReducerHook /> */}
+      <ControlForm />
     </div>
   )
 }
