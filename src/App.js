@@ -6,6 +6,7 @@ import Hooks from './Hooks'
 import Hooks2 from './Hooks2'
 import ReducerHook from './ReducerHook'
 import ControlForm from './ControlForm'
+import UncontrolForm from './UncontrolForm'
 // create context
 
 const FirstName = createContext()
@@ -21,7 +22,8 @@ function App() {
       {/* <Hooks /> */}
       {/* <Hooks2 /> */}
       {/* <ReducerHook /> */}
-      <ControlForm />
+      {/* <ControlForm /> */}
+      <UncontrolForm />
     </div>
   )
 }

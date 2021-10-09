@@ -4,6 +4,7 @@ const ControlForm = () => {
   const [usr, setUsr] = useState()
   const [pwd, setPwd] = useState()
   const [userData, setUserData] = useState([])
+  // const [isButtonClickAble, setButtonStatus] = useState(false)
 
   const submitForm = (e) => {
     e.preventDefault()
@@ -12,7 +13,9 @@ const ControlForm = () => {
     console.log(newEntry)
     console.log(userData)
     setUserData([...userData, newEntry]) // [] => [{}]
-    document.querySelectorAll('input')[0].value = ''
+    // document.querySelectorAll('input')[0].value = ''
+    setUsr('')
+    setPwd('')
   }
   return (
     <div>
@@ -21,6 +24,7 @@ const ControlForm = () => {
         <input
           type='text'
           placeholder='Enter Username'
+          value={usr}
           onChange={(e) => {
             console.log(e.target.value)
             setUsr(e.target.value)
@@ -29,13 +33,17 @@ const ControlForm = () => {
         <input
           type='password'
           placeholder='Enter Password'
+          value={pwd}
           onChange={(e) => {
             console.log(e.target.value)
             setPwd(e.target.value)
           }}
         />
         <div>
-          <button type='submit'>Submit</button>
+          {/* {usr !== 'undefined' ? setButtonStatus(true) : setButtonStatus(false)} */}
+          <button type='submit' disabled={usr ? (pwd ? false : true) : true}>
+            Submit
+          </button>
         </div>
       </form>
 
